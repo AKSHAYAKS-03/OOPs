@@ -45,7 +45,7 @@ namespace NotificationApp
                         break;
                     case "2":
                         notification = new SmsNotification();
-                        prompt = "Enter recipient Phone (E.164 like +911234567890): ";
+                        prompt = "Enter recipient Phone (Eg +911234567890): ";
                         break;
                     default:
                         Console.WriteLine("Invalid option. Try again.");
