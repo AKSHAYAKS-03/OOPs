@@ -23,3 +23,4 @@
 /Users/akshaya/Desktop/NotificationApp/bin/Debug/net10.0/Twilio.dll
 /Users/akshaya/Desktop/NotificationApp/obj/Debug/net10.0/Notification_App.csproj.AssemblyReference.cache
 /Users/akshaya/Desktop/NotificationApp/obj/Debug/net10.0/Notifica.6C91FDDC.Up2Date
+/Users/akshaya/Desktop/NotificationApp/obj/Debug/net10.0/Notification_App.sourcelink.json

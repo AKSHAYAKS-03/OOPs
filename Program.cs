@@ -2,6 +2,8 @@
 using NotificationApp.Services;
 using NotificationApp.Interfaces;
 using NotificationApp.Implementations;
+using NotificationApp.Models;
+using NotificationApp.Exceptions;
 
 namespace NotificationApp
 {
@@ -11,74 +13,67 @@ namespace NotificationApp
         {
             Console.WriteLine("\n=== Notification System ===\n");
 
-            Console.Write("Enter Your Name (System User): ");
-            string systemUser = Console.ReadLine() ?? "";
+            Console.Write("Enter your name: ");
+            string systemUserName = Console.ReadLine() ?? string.Empty;
+            var systemUser = new User(systemUserName, string.Empty, string.Empty);
 
-            NotificationService service = new NotificationService();
+            var service = new NotificationService();
 
-            bool running = true;
-
-            while (running)
+            while (true)
             {
-                Console.WriteLine("\n1. Email");
-                Console.WriteLine("2. SMS");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("\nMenu:");
+                Console.WriteLine("1) Send Email");
+                Console.WriteLine("2) Send SMS");
+                Console.WriteLine("3) Exit");
                 Console.Write("Choose option: ");
-                Console.WriteLine();
-
-                string choice = Console.ReadLine() ?? "";
+                var choice = Console.ReadLine() ?? string.Empty;
 
                 if (choice == "3")
                 {
-                    Console.WriteLine("Exiting...\n");
+                    Console.WriteLine("Goodbye!");
                     break;
                 }
 
-                string recipient = "";
-
-                if (choice == "1")
-                {
-                    Console.Write("Enter recipient Email: ");
-                    recipient = Console.ReadLine() ?? "";
-                }
-                else if (choice == "2")
-                {
-                    Console.Write("Enter recipient Phone (+91...): ");
-                    recipient = Console.ReadLine() ?? "";
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice!");
-                    continue;
-                }
-
-                Console.Write("Enter Message: ");
-                string message = Console.ReadLine() ?? "";
-
                 INotification notification = null;
+                string prompt = "Recipient (email or phone): ";
 
                 switch (choice)
                 {
                     case "1":
                         notification = new EmailNotification();
+                        prompt = "Enter recipient Email: ";
                         break;
-
                     case "2":
                         notification = new SmsNotification();
+                        prompt = "Enter recipient Phone (E.164 like +911234567890): ";
                         break;
-
                     default:
-                        Console.WriteLine("Invalid choice!");
+                        Console.WriteLine("Invalid option. Try again.");
                         continue;
                 }
 
-                if (notification == null)
-                {
-                    Console.WriteLine("Invalid choice!");
-                    continue;
-                }
+                Console.Write(prompt);
+                var recipient = Console.ReadLine() ?? string.Empty;
 
-                service.SendNotification(notification, recipient, message);
+                Console.Write("Enter message: ");
+                var message = Console.ReadLine() ?? string.Empty;
+
+                try
+                {
+                    bool ok = service.SendNotification(notification, recipient, message);
+                    if (ok)
+                    {
+                        Console.WriteLine("Notification processed successfully.");
+                    }
+                }
+                catch (ValidationException vex)
+                {
+                    Console.WriteLine("Validation error: " + vex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
             }
         }
     }
