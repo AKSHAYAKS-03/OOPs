@@ -1,11 +1,11 @@
 ﻿using System;
-using NotificationApp.Services;
-using NotificationApp.Interfaces;
-using NotificationApp.Implementations;
-using NotificationApp.Models;
-using NotificationApp.Exceptions;
+using OOPS.Services;
+using OOPS.Interfaces;
+using OOPS.Implementations;
+using OOPS.Models;
+using OOPS.Exceptions;
 
-namespace NotificationApp
+namespace OOPS
 {
     class Program
     {
@@ -34,7 +34,7 @@ namespace NotificationApp
                     break;
                 }
 
-                INotification notification = null;
+                INotification? notification = null;
                 string prompt = "Recipient (email or phone): ";
 
                 switch (choice)
