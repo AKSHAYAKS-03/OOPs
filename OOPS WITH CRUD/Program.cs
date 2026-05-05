@@ -1,6 +1,7 @@
 ﻿using System;
 using OOPS_WITH_CRUD.Interfaces;
 using OOPS_WITH_CRUD.Models;
+using OOPS_WITH_CRUD.Utilities;
 using OOPS_WITH_CRUD.Services;
 using OOPS_WITH_CRUD.Repositories;
 
@@ -34,10 +35,22 @@ namespace OOPS_WITH_CRUD
                         Console.Write("\nEnter Name: ");
                         user.Name = Console.ReadLine() ?? "";
                         Console.Write("Enter Email: ");
-                        user.Email = Console.ReadLine() ?? "";
+                        string email = Console.ReadLine() ?? "";
+                        if(!Validator.IsValidEmail(email))
+                        {
+                            Console.WriteLine("Invalid email format!");
+                            break;
+                        }
+                        user.Email = email;
                         Console.Write("Enter Phone: ");
-                        user.Phone = Console.ReadLine() ?? "";
-
+                        string phone = Console.ReadLine() ?? "";
+                        if(!Validator.IsValidPhone(phone))
+                        {
+                            Console.WriteLine("Invalid phone format!");
+                            break;
+                        }
+                        user.Phone = phone;
+                      
                         userRepository.Create(user);
                         Console.WriteLine("User added successfully!");
                         break;
@@ -49,11 +62,11 @@ namespace OOPS_WITH_CRUD
                             Console.WriteLine("No users found!");
                             break;
                         }
-                        Console.WriteLine("\nusers:");
-                        // foreach(var u in users)
-                        // {
-                        //     Console.WriteLine($"ID: {u.Id}, Name: {u.Name}, Email: {u.Email}, Phone: {u.Phone}");
-                        // }
+                        Console.WriteLine("\nUsers:");
+                        foreach(var u in users)
+                        {
+                            Console.WriteLine(u);
+                        }
                         break;
 
                     case 3:
@@ -69,11 +82,23 @@ namespace OOPS_WITH_CRUD
                         var updated = new User();
                         Console.Write("Enter Name: ");
                         updated.Name = Console.ReadLine() ?? "";
-                        Console.Write("Enter Email: ");
-                        updated.Email = Console.ReadLine() ?? "";
-                        Console.Write("Enter Phone: ");
-                        updated.Phone = Console.ReadLine() ?? "";
 
+                        Console.Write("Enter Email: ");
+                        string email2 = Console.ReadLine() ?? "";
+                        if(!Validator.IsValidEmail(email2))
+                        {
+                            Console.WriteLine("Invalid email format!");
+                            break;
+                        }
+                        updated.Email = email2;
+                        Console.Write("Enter Phone: ");
+                        string phone2 = Console.ReadLine() ?? "";
+                        if(!Validator.IsValidPhone(phone2))
+                        {
+                            Console.WriteLine("Invalid phone format!");
+                            break;
+                        }
+                        updated.Phone = phone2;  
                         userRepository.Update(uid,updated);
                         Console.WriteLine("Updated Successfully!");
                         break;
@@ -103,6 +128,12 @@ namespace OOPS_WITH_CRUD
                         Console.Write("\nEnter Message: ");
                         string message = Console.ReadLine() ?? "";
 
+                        if(!Validator.IsValidMessage(message))
+                        {
+                            Console.WriteLine("Invalid message!");
+                            break;
+                        }
+                        
                         Console.WriteLine("\nChoose Notification Type: 1.Email 2.SMS");
                         string notifChoice = Console.ReadLine() ?? "";
 

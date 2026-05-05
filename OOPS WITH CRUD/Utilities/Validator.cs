@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace NotificationApp.Utilities
+namespace OOPS_WITH_CRUD.Utilities
 {
     public static class Validator
     {

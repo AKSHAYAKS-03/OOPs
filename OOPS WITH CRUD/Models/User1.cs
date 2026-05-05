@@ -4,7 +4,7 @@ namespace OOPS_WITH_CRUD.Models
     {
         public override string ToString()
         {
-            return $"{Id} - {Name} - {Email} - {Phone}";
+            return $"{Id}\nName: {Name}\nEmail: {Email}\nPhone: {Phone}";
         }
     }
 }

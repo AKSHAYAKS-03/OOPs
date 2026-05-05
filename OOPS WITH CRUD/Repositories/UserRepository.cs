@@ -32,7 +32,8 @@ namespace OOPS_WITH_CRUD.Repositories
         }
         public List<User> GetAll()
         {
-            return new List<User>(store.Values);
+                return new List<User>(store.Values);
+
         }
         public User? Update(string id, User user)
         {
