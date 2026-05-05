@@ -1,9 +1,9 @@
-using NotificationApp.Interfaces;
-using NotificationApp.Models;
-using NotificationApp.Utilities;
-using NotificationApp.Exceptions;
+using OOPS.Interfaces;
+using OOPS.Models;
+using OOPS.Utilities;
+using OOPS.Exceptions;
 
-namespace NotificationApp.Services
+namespace OOPS.Services
 {
     public class NotificationService
     {

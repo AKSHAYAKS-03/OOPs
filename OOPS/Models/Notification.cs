@@ -1,6 +1,6 @@
 using System;
 
-namespace NotificationApp.Models
+namespace OOPS.Models
 {
     public class Notification
     {

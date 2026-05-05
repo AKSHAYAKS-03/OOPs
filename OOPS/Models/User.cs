@@ -1,4 +1,4 @@
-namespace NotificationApp.Models
+namespace OOPS.Models
 {
     public class User
     {

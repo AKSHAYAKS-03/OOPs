@@ -1,4 +1,4 @@
-namespace NotificationApp.Interfaces
+namespace OOPS.Interfaces
 {
     public interface INotification
     {

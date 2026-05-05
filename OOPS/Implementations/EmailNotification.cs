@@ -1,9 +1,9 @@
 using System;
 using System.Net;
 using System.Net.Mail;
-using NotificationApp.Interfaces;
+using OOPS.Interfaces;
 
-namespace NotificationApp.Implementations
+namespace OOPS.Implementations
 {
     public class EmailNotification : INotification
     {

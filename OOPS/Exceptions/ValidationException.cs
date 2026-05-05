@@ -1,6 +1,6 @@
 using System;
 
-namespace NotificationApp.Exceptions
+namespace OOPS.Exceptions
 {
     public class ValidationException : Exception
     {

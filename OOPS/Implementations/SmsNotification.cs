@@ -1,7 +1,7 @@
 using System;
-using NotificationApp.Interfaces;
+using OOPS.Interfaces;
 
-namespace NotificationApp.Implementations
+namespace OOPS.Implementations
 {
     public class SmsNotification : INotification
     {
