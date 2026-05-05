@@ -1,0 +1,15 @@
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.GeneratedMSBuildEditorConfig.editorconfig
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.AssemblyInfoInputs.cache
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.AssemblyInfo.cs
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.csproj.CoreCompileInputs.cache
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.sourcelink.json
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/bin/Debug/net10.0/OOPS WITH CRUD
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/bin/Debug/net10.0/OOPS WITH CRUD.deps.json
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/bin/Debug/net10.0/OOPS WITH CRUD.runtimeconfig.json
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/bin/Debug/net10.0/OOPS WITH CRUD.dll
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/bin/Debug/net10.0/OOPS WITH CRUD.pdb
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.dll
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/refint/OOPS WITH CRUD.dll
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.pdb
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/OOPS WITH CRUD.genruntimeconfig.cache
+/Users/akshaya/Desktop/NotificationApp/OOPS WITH CRUD/obj/Debug/net10.0/ref/OOPS WITH CRUD.dll

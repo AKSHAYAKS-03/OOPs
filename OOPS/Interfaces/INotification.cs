@@ -5,4 +5,3 @@ namespace NotificationApp.Interfaces
         void Send(string recipient, string message);
     }
 }
-
